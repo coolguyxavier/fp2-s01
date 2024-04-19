@@ -35,8 +35,8 @@ def main():
             run = 0
 def readfile():
     print("Here's all the scores.")
-    highscores = open('scores.txt', 'r')
-    lines = highscores.readlines()
+    highscores = open('scores.txt', 'r') # opens the .txt file and saves it as highscores
+    lines = highscores.readlines() # reads all the lines and saves it as lines
     
     for line in lines:
         print(line) # prints each line seperately
@@ -52,11 +52,11 @@ def appendfile():
     
     add_score = input("What score do they have?\n>")
     
-    highscores = open('scores.txt', 'a')
+    highscores = open('scores.txt', 'a') # opens file
     
-    highscores.write("\n" + add_name + "-" + add_score)
+    highscores.write("\n" + add_name + "-" + add_score) # on a new line at the bottom, add together the user's name and score choice
     
-    highscores.close()
+    highscores.close() # closes file
     
     print("Your username and score was added to the .txt file.")
     
